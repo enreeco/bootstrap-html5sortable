@@ -1,7 +1,7 @@
 Bootstrap HTML5 Sortable jQuery Plugin
 ============================
 
-**[Demos & Documentation](http://psfpro.ru/html5sortable)**
+**[Demos & Documentation](http://psfpro.ru/html5sortable/index.html)**
 
 Features
 --------
