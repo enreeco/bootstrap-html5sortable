@@ -1,17 +1,13 @@
-I failed to mainttain this project in the past two years.
-For an updated version see [voidberg's fork](https://github.com/voidberg/html5sortable) 
-
-HTML5 Sortable jQuery Plugin
+Bootstrap HTML5 Sortable jQuery Plugin
 ============================
 
-**[Demos & Documentation](http://farhadi.ir/projects/html5sortable)**
+**[Demos & Documentation](http://psfpro.ru/html5sortable)**
 
 Features
 --------
 * Less than 1KB (minified and gzipped).
 * Built using native HTML5 drag and drop API.
 * Supports both list and grid style layouts.
-* Similar API and behaviour to jquery-ui sortable plugin.
 * Works in IE 5.5+, Firefox 3.5+, Chrome 3+, Safari 3+ and, Opera 12+.
 
 Usage
@@ -22,6 +18,14 @@ Use `sortable` method to create a sortable list:
 $('.sortable').sortable();
 ```
 Use `.sortable-dragging` and `.sortable-placeholder` CSS selectors to change the styles of a dragging item and its placeholder respectively.
+
+Use `placeholderClass`  option to create sortable lists with additional class for placeholder:
+
+``` javascript
+$('.sortable').sortable({
+    placeholderClass: 'customPlaceholderClass'
+});
+```
 
 Use `sortupdate` event if you want to do something when the order changes (e.g. storing the new order):
 
@@ -78,21 +82,6 @@ To enable a disabled sortable:
 
 ``` javascript
 $('.sortable').sortable('enable');
-```
-
-The API is compatible with jquery-ui. So you can use jquery-ui as a polyfill in older browsers:
-
-``` javascript
-yepnope({
-    test: Modernizr.draganddrop,
-    yep: 'jquery.sortable.js',
-    nope: 'jquery-ui.min.js',
-    complete: function() {
-        $('.sortable').sortable().bind('sortupdate', function(e, ui) {
-            //Store the new order.
-        }
-    }
-});
 ```
 
 License
